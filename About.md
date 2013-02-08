@@ -1,6 +1,4 @@
-
-About
-=====
+#About
 
 I'm a software developer designing a desktop application that is quite complex, and I was searching for a way to provide documentation for the system. I wanted the documentation to have the following features.
 
@@ -18,15 +16,15 @@ So I looked for some basic HTML boilerplate code and lo and behold...
 
 ##HTML5 Boilerplate & Initializr
 
-A group of very smart people had discovered that they were writing the same HTML code over and over and decided to put together a template full of best practises and best of breeed frameworks and fittingly entitled this [HTML5 Boilerplate][5].
+A group of very smart people had discovered that they were writing the same HTML code over and over and decided to put together a template full of best practises and best of breed frameworks and fittingly entitled this [HTML5 Boilerplate][5].
 
 Now the default web page offered is quite bare, so I opted for one of the templates based on the boilerplate code, known as [Initializr][6]. This gives the added features of a css framework and some pretty formatting and predefined layout classes. All of the work I did not want to do.
 
 ##HTML
 
-So now I'm coding in HTML and for a while that's working quite well. The documentation looks good, but I'm spending a lot of time working the angle brackets, making sure the links are working, and copying an pasting the same damn code into every web page... builting a static web site.
+So now I'm coding in HTML and for a while that's working quite well. The documentation looks good, but I'm spending a lot of time editing the angle brackets, making sure the links are working, and copying and pasting the same damn code into every web page... building a static web site.
 
-Now there is no way I want a framework; that violates the necessity of working offline. It is possible to deploy a full fledged wiki and host it in a .NET applicaiton (done it), and believe me I thought of going this way for this project as well. And then I hit myself in the head to make that thought go away.
+Now there is no way I want a [CMS][12]; that violates the necessity of working offline. It is possible to deploy a full fledged wiki and host it in a .NET applicaiton ([done it][13]), and believe me I thought of going this way for this project as well. And then I hit myself in the head to make that thought go away.
 
 ##Markdown
 
@@ -34,8 +32,7 @@ Now there is no way I want a framework; that violates the necessity of working o
 
 Now Markdown is also quite easily abused, and many [hipster programmers][2] use it for *the wrong thing*, mainly because it's quite popular and people are looking for things to hit with [this particular hammer][3]. 
 
-
-Markdown fits this project because of it's portability and transformability, and as you'll see in a little bit, I came up with a pretty neat way of fitting it into a web framework.
+Markdown fits this project because of its portability and transformability, and as you'll see in a little bit, I came up with a pretty neat way of fitting it into a web framework.
 
 ##Stamping a web site
 
@@ -43,7 +40,7 @@ I thought about writing the code in markdown and processing it into a static web
 
 ##Loading Markdown into HTML5 Boilerplate
 
-Worrying away at the problem like a dog on a bone I redefine the goal to be "how do I load a Markdown file off the server and display it on the client. It turns out there's a way to do this.
+Worrying away at the problem like a dog on a bone I redefine the goal as "how do I load a Markdown file off the server and display it on the client. It turns out there's a way to do this.
 
 ###jQuery
 
@@ -51,7 +48,7 @@ The [jQuery get][8] method loads data from the server using an HTTP GET request.
 
 ###Pagedown
 
-The [Pagedown][9] library was developed by the coders at [StackOverflow][10], and comes with a pure JavaScript implementation that will take a string and output valid HTML
+The [Pagedown][9] library is developed by the coders at [StackOverflow][10], and comes with a pure JavaScript implementation that will take a string and output valid HTML
 
 ##The Result
 
@@ -72,7 +69,9 @@ It turns out that around this time Google announced that Google Drive had [added
 
 #Summary
 
-In summary; I've
+In summary; I've put together a template using Initializr that demonstrates loading Markdown files from the server and displaying them within the framework. I've also demonstrated hosting this on Google Drive.
+
+The result is something that functions very much like a wiki with raw Markdown files that can be edited with a text editor, providing a simple web framework that's entirely client-side.
 
 [1]: http://daringfireball.net/projects/markdown/
 [2]: http://instacod.es/58024
@@ -85,3 +84,5 @@ In summary; I've
 [9]: http://code.google.com/p/pagedown/
 [10]: http://www.StackOverflow.com
 [11]: http://googleappsdeveloper.blogspot.ca/2012/11/announcing-google-drive-site-publishing.html
+[12]: http://en.wikipedia.org/wiki/Content_management_system
+[13]: https://bitbucket.org/bluetoque/bluetoque-pub/src/dbd8af42998b93c2865e56fa6657b6dab0b2f788/DesktopWiki?at=default
