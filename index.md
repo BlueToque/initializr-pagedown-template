@@ -1,0 +1,3 @@
+This web site was designed as an experiment on what you can do using the [HTML5 Boilerplate](http://www.initializr.com/), [Markdown](http://code.google.com/p/pagedown/wiki/PageDown) and [Google Drive](http://drive.google.com) [web site publishing](http://googleappsdeveloper.blogspot.ca/2012/11/announcing-google-drive-site-publishing.html).
+
+By combining the three elements, I've created an example web site that can be styled and edited easily using a simple text editor.
