@@ -21,32 +21,33 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			// add and event handler to all anchors
+			// add an event handler to all anchors
 			// test if the link it referrs to ends with ".md"
 			// if it does, process the file as markdown
-			$("a").on("click", function (event) {
-				if (/.md$/.test(event.currentTarget.href)) {
-					loadMarkDown(event.currentTarget.href);
-					return false;
-				}
-				return true;
-			});
+			$("a").on("click", clickMarkdownLink);
 
-
-			// get the markdown index, process it and display the html
-			// in the markdown-index div
-			$.get("index.md", function (data) {
-				var converter = new Markdown.Converter();
-				$('#markdown').html(converter.makeHtml(data));
-			});
-
+			loadMarkDown("index.md");
 		});
 
-		// get the named file, convert it to HTML & display it in the markdown div
+		// when you click on a markdown link, load the file
+		// if it's just a regular link do nothing
+		function clickMarkdownLink(event)
+		{
+			if (/.md$/.test(event.currentTarget.href)) {
+				loadMarkDown(event.currentTarget.href);
+				return false;
+			}
+			return true;
+		}
+
+		// get the named file, convert it to HTML & display it
+		// after loading the new markdown, remember to add the event handler
 		function loadMarkDown(file) {
 			$.get(file, function (data) {
 				var converter = new Markdown.Converter();
 				$("#markdown").html(converter.makeHtml(data));
+				$("a").off("click", clickMarkdownLink);
+				$("a").on("click", clickMarkdownLink);
 			});
 		}
 
